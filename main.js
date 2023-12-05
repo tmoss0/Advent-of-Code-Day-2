@@ -8,7 +8,6 @@ try {
     const regex = /Game (\d+):/;
     const regexMatch = game.match(regex);
     if (regexMatch) {
-      gameNumber = parseInt(regexMatch[1], 10);
       const removeGameId = game.replace(/Game \d+: /g, '');
       const individualMatches = removeGameId.split(';');
 
