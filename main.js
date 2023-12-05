@@ -1,6 +1,5 @@
 const fs = require('fs');
 let powerOfSets = 0;
-let gameNumber = 0;
 
 try {
   const data = fs.readFileSync('strings.txt', 'utf8');
@@ -43,8 +42,7 @@ try {
         maxBlueCubes = Math.max(maxBlueCubes, counts.blue);
       }
 
-      const powersOfMatch = maxRedCubes * maxGreenCubes * maxBlueCubes;
-      powerOfSets += powersOfMatch;
+      powerOfSets += maxRedCubes * maxGreenCubes * maxBlueCubes;
     }
   });
 
